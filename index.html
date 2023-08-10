@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Complete Portfoloio Website</title>
+    <!-- <link rel="stylesheet" text="text/CSS" href="project1.css"> -->
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 'Rubik' , sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+    scroll-behavior: smooth;
+    scroll-padding: 2rem;
+
+}
+
+:root{
+    --bg-color:#10101a;
+    --main-color:#2fbf71;
+    --2-main-color:#ffffffcc;
+    --text-color: #fff;
+    --big-font: 5rem;
+    --h2-font: 1.9rem;
+    --p-font: 1rem;
+
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+    padding: 24px 14%;
+    transition: .3s;
+}
+.logo{
+    color: var(--text-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+span{
+    color: var(--main-color);
+}
+
+.navbar{
+    display: flex;
+}
+
+.navbar a{
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px 20px;
+}
+ .navbar a:hover{
+    background: var(--main-color);
+    transition: .3s;
+ }
+
+#menu-icon{
+    font-size: 28px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+section{
+    padding: 120px 14%;
+}
+
+.Home{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 6rem;
+    align-items: center;
+}
+
+.Home-img img{
+    max-width: 100%;
+    width: 600px;
+    height: auto;
+}
+
+.Home-text h5{
+    color: var(--text-color);
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0 0 20px;
+}
+
+.Home-text h1{
+    color: var(--text-color);
+    font-size: var(--big-font);
+    font-weight: 700;
+    line-height: 1;
+    margin: 0 0 20px;
+}
+
+.Home-text h6{
+    color: var(--text-color);
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.Home-text p{
+    max-width: 470px;
+    font-size: var(--p-font);
+    font-weight: 300;
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--2-main-color);
+}
+
+.btn{
+    background: var(--main-color);
+    color: var(--text-color);
+    box-shadow: 4px 4px var(--text-color);
+    padding: 0 25px;
+    line-height: 42px;
+    display: inline block;
+    border: 1px solid transparent;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    transition: ease aLL 0.35;
+
+}
+
+.btn:hover{
+    background: var(--text-color);
+    color: var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+}
+
+
+.about{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 5rem;
+    align-items: center;
+}
+
+.about-img img{
+    max-width: 100%;
+    width: 580px;
+    height: auto;
+}
+
+.about-text h3{
+    color: var(--text-color);
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 6px;
+    margin: 0 0 30px;
+}
+
+.about-text h2{
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: var(--h2-font);
+    line-height: 1.2;
+    max-width: 470px;
+    margin-bottom: 2rem;
+}
+
+.about-text p{
+    max-width: 570px;
+    font-size: var(--p-font);
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    line-height: 1.8rem;
+    color: var(--2-main-color);
+}
+
+
+.count{
+    margin-bottom: 2rem;
+}
+
+
+
+.about-text .count a{
+    color: var(--2-main-color);
+    margin-right: 20px;
+    word-spacing: 5px;
+}
+
+
+.count span{
+    color: var(--text-color);
+    font-size: 2.7rem;
+    font-weight: 600;
+}
+
+.main-btn .btn{
+    margin-right: 20px;
+}
+
+
+.centre{
+    text-align: center;
+}
+
+.centre h3{
+    color: var(--text-color);
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 6px;
+}
+
+.service-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    grid-gap: 2rem;
+    align-items: center;
+    margin-top: 4.4rem;
+}
+
+.row{
+    background: #0b0b13;
+    padding: 60px 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: aLL .40s;
+}
+
+.row i{
+    color: var(--main-color);
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.row h3{
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+
+.row p{
+    font-size: 18px;
+    color: var(--2-main-color);
+    line-height: 30px;
+}
+
+.row:hover{
+    transform: translateY(-15px);
+    box-shadow: 0px 15px 30px 0px rgb(0 0 0 /70%);
+}
+
+.cta{
+    background: #0b0b13;
+    width: 100%;
+    padding: 150px 0;
+    text-align: center;
+    margin: 100px auto;
+}
+
+.cta h4{
+    color: var(--text-color);
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.cta h2{
+    color: var(--main-color);
+    font-size: 4rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+    </style>
+
+
+
+
+
+
+
+</head>
+<body>
+   <!----------Header----------->
+   <header>
+    <a href="#" class="logo">Portfo<span>lio</span></a>
+    <div class="bx bx-menu" id="menu-icon"></div>
+
+    <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    </header>
+   <!---------Start Home------------> 
+   <section class="Home" id="Home">
+    <div class="Home-text">
+        <h5> Hello, I am</h5>
+        <h1>Aditya Singh</h1>
+        <h6>I am Passionate Full Stack <span>Developer</span></h6>
+        <p>I design and develop services for customers of all sizes, specialising
+             in creating stylish, modern website, web services and online stores.</p>
+        <a href="#" class="btn">Download CV</a>
+    </div>
+
+    <div class="Home-img">
+        <img src="img/its me-removebg-preview-photoaidcom-cropped.jpg">
+    </div>
+   </section>
+    <!---------Start About------------>
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="img/aboutme1.jpg">
+        </div>
+
+        <div class="about-text">
+            <h3>ABOUT ME</h3>
+            <h2>I'm Freelancer Frontend Developer over 3 years of Working experience.</h2>
+            <p>I'm Freelancer Frontend Developer over 3 years of Working experience.
+                I am from INDIA. I code and create web elements for amazing people around the world.
+                I like to Work with new people. New people new experience.
+            </p>
+            <div class="count">
+                <a href="#"><span>5K </span>Projects Completed</a>
+                <a href="#"><span>5K </span>Satisfied Clients</a>
+            </div>
+            <div class="main-btn">
+                <a href="#" class="btn">Contact Me</a>
+                <a href="#" class="btn">Portfolio</a>
+            </div>
+        
+        </div>
+    </section> 
+    <!---------Start Services------------>
+    <section class="services" id="services">
+        <div class="centre">
+            <h3>What I do ?</h3>
+        </div>
+
+        <div class="service-content">
+
+            <div class="row">
+                 <i class='bx bx-cast'></i>
+                 <h3>Web Devlopment</h3>
+                 <p>There are many variations of passages of lorem ipsum available , but the majority have suffered.</p>
+            </div>
+
+            <div class="row">
+                <i class='bx bx-layer' ></i>
+                <h3>Database Management</h3>
+                <p>There are many variations of passages of lorem ipsum available , but the majority have suffered.</p>
+           </div>
+
+           <div class="row">
+            <i class='bx bx-line-chart'></i>
+               <h3>UI/UX Designing</h3>
+               <p>There are many variations of passages of lorem ipsum available , but the majority have suffered.</p>
+           </div>
+
+           <div class="row">
+            <i class='bx bx-camera'></i>
+              <h3>Web Hosting</h3>
+              <p>There are many variations of passages of lorem ipsum available , but the majority have suffered.</p>
+          </div>
+
+          <div class="row">
+            <i class='bx bx-desktop'></i>
+              <h3>Cloud Deployment</h3>
+              <p>There are many variations of passages of lorem ipsum available , but the majority have suffered.</p>
+        </div>
+
+        <div class="row">
+            <i class='bx bx-user-voice' ></i>
+              <h3>SEO Management</h3>
+              <p>There are many variations of passages of lorem ipsum available , but the majority have suffered.</p>
+        </div>
+
+        </div>
+    </section>
+    <!--------------CTA-------------->
+    <section class="cta">
+        <h4>Have Any Project In Your Mind?</h4>
+        <h2>Just Say Hello!</h2>
+        <a href="#" class="btn">Hire Me</a>
+    </section>
+   
+   <!--------Link to JS--------->
+   <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
